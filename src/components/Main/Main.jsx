@@ -14,9 +14,9 @@ const Main = () => {
 			<div className="main-container">
 				<div className="greet">
 					<p>
-						<span>Hello , dev</span>
+						<span>Whats up, folks</span>
 					</p>
-					<p>How can i help u today</p>
+					<p>How can i help you today</p>
 				</div>
 				<div className="cards">
 					<div className="card">
