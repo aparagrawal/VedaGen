@@ -1,0 +1,113 @@
+.sidebar {
+	min-height: 100vh;
+	display: inline-flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background: linear-gradient(
+		180deg,
+		rgba(255, 255, 255, 0.9) 0%,
+		rgba(241, 245, 249, 0.9) 100%
+	);
+	backdrop-filter: blur(20px);
+	padding: 25px 15px;
+	border-right: 1px solid rgba(203, 213, 225, 0.3);
+	box-shadow: 4px 0 20px rgba(0, 0, 0, 0.05);
+}
+.sidebar img {
+	width: 20px;
+	filter: brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(2878%)
+		hue-rotate(346deg) brightness(104%) contrast(97%);
+	transition: all 0.3s ease;
+}
+
+.sidebar .menu {
+	display: block;
+	margin-left: 10px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.sidebar .menu:hover {
+	transform: scale(1.1);
+	filter: brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(2878%)
+		hue-rotate(346deg) brightness(104%) contrast(97%)
+		drop-shadow(0 0 8px rgba(59, 130, 246, 0.4));
+}
+
+.sidebar .new-chat {
+	margin-top: 50px;
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+	padding: 12px 18px;
+	background: rgba(59, 130, 246, 0.1);
+	backdrop-filter: blur(10px);
+	border-radius: 50px;
+	font-size: 15px;
+	color: #3b82f6;
+	cursor: pointer;
+	border: 1px solid rgba(59, 130, 246, 0.2);
+	transition: all 0.3s ease;
+	font-weight: 500;
+}
+
+.sidebar .new-chat:hover {
+	background: rgba(59, 130, 246, 0.15);
+	transform: translateY(-2px);
+	box-shadow: 0 8px 25px rgba(59, 130, 246, 0.15);
+}
+.sidebar .recent {
+	display: flex;
+	flex-direction: column;
+}
+
+.sidebar .recent-title {
+	margin-top: 30px;
+	margin-bottom: 20px;
+	color: #64748b;
+	font-weight: 600;
+	font-size: 14px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.sidebar .recent-entry {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 12px 15px;
+	padding-right: 40px;
+	border-radius: 50px;
+	color: #475569;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	border: 1px solid transparent;
+}
+
+.sidebar .recent-entry:hover {
+	background: rgba(59, 130, 246, 0.1);
+	border-color: rgba(59, 130, 246, 0.2);
+	transform: translateX(5px);
+	backdrop-filter: blur(10px);
+}
+
+.sidebar.bottom {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.sidebar .bottom-item {
+	padding: 12px 15px;
+	cursor: pointer;
+	border-radius: 50px;
+	transition: all 0.3s ease;
+	border: 1px solid transparent;
+}
+
+.sidebar .bottom-item:hover {
+	background: rgba(59, 130, 246, 0.1);
+	border-color: rgba(59, 130, 246, 0.2);
+	transform: translateX(5px);
+	backdrop-filter: blur(10px);
+}
