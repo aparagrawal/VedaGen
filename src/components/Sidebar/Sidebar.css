@@ -59,6 +59,7 @@
 .sidebar .recent {
 	display: flex;
 	flex-direction: column;
+	animation: fadeIn 1.5s;
 }
 
 .sidebar .recent-title {
@@ -110,4 +111,116 @@
 	border-color: rgba(59, 130, 246, 0.2);
 	transform: translateX(5px);
 	backdrop-filter: blur(10px);
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+	.sidebar {
+		position: fixed;
+		top: 0;
+		left: -300px;
+		width: 280px;
+		height: 100vh;
+		z-index: 1000;
+		transition: left 0.3s ease;
+		box-shadow: 2px 0 20px rgba(0, 0, 0, 0.1);
+	}
+
+	.sidebar.open {
+		left: 0;
+	}
+
+	/* Hide the menu button inside sidebar on mobile since we have one in main nav */
+	.sidebar .menu {
+		display: none;
+	}
+
+	/* Always show content on mobile when sidebar is open */
+	.sidebar.open .new-chat p,
+	.sidebar.open .recent,
+	.sidebar.open .bottom-item p {
+		display: block !important;
+	}
+
+	.sidebar .new-chat {
+		margin-top: 60px;
+		padding: 10px 15px;
+		font-size: 14px;
+	}
+
+	.sidebar .recent-entry {
+		padding: 10px 12px;
+		padding-right: 35px;
+		font-size: 13px;
+	}
+
+	.sidebar .recent-entry p {
+		font-size: 12px;
+	}
+
+	.sidebar .bottom-item {
+		padding: 10px 12px;
+		font-size: 13px;
+	}
+
+	.sidebar .bottom-item p {
+		font-size: 12px;
+	}
+}
+
+@media (max-width: 480px) {
+	.sidebar {
+		width: 260px;
+		left: -260px;
+	}
+
+	.sidebar .menu {
+		right: -45px;
+		padding: 8px;
+	}
+
+	.sidebar img {
+		width: 18px;
+	}
+
+	.sidebar .new-chat {
+		margin-top: 50px;
+		padding: 8px 12px;
+		font-size: 13px;
+	}
+
+	.sidebar .recent-entry {
+		padding: 8px 10px;
+		padding-right: 30px;
+	}
+
+	.sidebar .recent-entry p {
+		font-size: 11px;
+	}
+
+	.sidebar .bottom-item {
+		padding: 8px 10px;
+	}
+
+	.sidebar .bottom-item p {
+		font-size: 11px;
+	}
+}
+
+/* Tablet Responsive Design */
+@media (min-width: 769px) and (max-width: 1024px) {
+	.sidebar {
+		width: 280px;
+		padding: 20px 12px;
+	}
+
+	.sidebar .new-chat {
+		padding: 10px 16px;
+		font-size: 14px;
+	}
+
+	.sidebar .recent-entry {
+		padding: 10px 14px;
+		font-size: 14px;
+	}
 }

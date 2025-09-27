@@ -1,4 +1,4 @@
-const api_key = "AIzaSyDtI7rDxY-GMyLfUd7a0e3MmVPIlXwQeis";
+const api_key = "AIzaSyD0kRLyrSOMmflY3qB89urk24Bj2Ppx6e4";
 
 // To run this code you need to install the following dependencies:
 // npm install @google/genai mime
@@ -26,12 +26,12 @@ function saveBinaryFile(fileName, content) {
 
 async function main(input) {
 	const ai = new GoogleGenAI({
-		apiKey: "AIzaSyDtI7rDxY-GMyLfUd7a0e3MmVPIlXwQeis",
+		apiKey: "AIzaSyD0kRLyrSOMmflY3qB89urk24Bj2Ppx6e4",
 	});
 	const config = {
 		responseModalities: ["IMAGE", "TEXT"],
 	};
-	const model = "gemini-2.5-flash-image-preview";
+	const model = "gemini-1.5-flash-image";
 	const contents = [
 		{
 			role: "user",
@@ -48,6 +48,8 @@ async function main(input) {
 		config,
 		contents,
 	});
+
+	console.log("this is my response", response);
 	let fileIndex = 0;
 	for await (const chunk of response) {
 		if (
